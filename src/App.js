@@ -4,10 +4,9 @@ import Menu from "./componets/Menu";
 import Header from "./componets/Header";
 import axios from "axios";
 import { useDatalayerValue } from "./Datalayer";
-import { topRatedUrl } from "./api";
 
 function App() {
-  const [, dispatch] = useDatalayerValue();
+  const [{}, dispatch] = useDatalayerValue();
   useEffect(() => {
     axios
       .get(
