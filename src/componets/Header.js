@@ -14,7 +14,6 @@ function Header() {
     <div className="header">
       {topRated && (
         <>
-          {console.log(topRated)}
           <div className="header__fullImage">
             {/* <ReactPlayer
               url="https://www.youtube.com/watch?v=h6hZkvrFIj0"
@@ -26,7 +25,7 @@ function Header() {
           <div className="header__movieInfo">
             <h1>{topRated.original_title}</h1>
             <br />
-            <h3>{topRated.overview}</h3>
+            <h2>{topRated.overview}</h2>
             <Button variant="contained" size="large">
               <PlayArrowIcon />
               Play

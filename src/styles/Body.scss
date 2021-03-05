@@ -1,0 +1,14 @@
+.body {
+  left: 3%;
+  position: absolute;
+  margin-top: -150px;
+}
+.body__movieList {
+  display: flex;
+}
+.body__margin {
+  margin-top: -50px;
+  &:first-child {
+    margin: 0;
+  }
+}
