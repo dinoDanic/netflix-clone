@@ -2,12 +2,12 @@ import React from "react";
 import "../styles/Header.scss";
 import { useDatalayerValue } from "../Datalayer";
 import { Button } from "@material-ui/core";
-import ReactPlayer from "react-player";
+
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 
 function Header() {
-  const [{ topRated, api_key }] = useDatalayerValue();
+  const [{ topRated }] = useDatalayerValue();
   const base_image_url = "http://image.tmdb.org/t/p/original";
 
   return (
@@ -37,6 +37,7 @@ function Header() {
           </div>
         </>
       )}
+      <div className="header__blackBorderBottom"></div>
     </div>
   );
 }

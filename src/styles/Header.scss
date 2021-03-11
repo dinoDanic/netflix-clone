@@ -4,6 +4,14 @@
   background: gray;
   position: relative;
 }
+.header__blackBorderBottom {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(0deg, black, rgba(0, 0, 0, 0));
+  bottom: 0;
+  left: 0;
+}
 .header__fullImage {
   position: absolute;
   width: 100%;
@@ -24,15 +32,18 @@
     max-width: 700px;
   }
   button {
-    padding: 8px 25px;
+    padding: 10px 55px;
     background: white !important;
     border: none;
     border-radius: 5px;
     margin: 20px 10px 0 0;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: none;
   }
   .MuiButtonBase-root {
     background-color: white !important;
-    opacity: 1;
+    opacity: 0.9;
   }
   .MuiButtonBase-root:last-child {
     background: gray !important;

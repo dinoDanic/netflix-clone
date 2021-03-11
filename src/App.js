@@ -5,13 +5,13 @@ import Header from "./componets/Header";
 import axios from "axios";
 import { useDatalayerValue } from "./Datalayer";
 import Body from "./componets/Body";
+import Login from "./componets/Login";
+import WhosWatching from "./componets/WhosWatching";
 
 function App() {
-  const [{ popular }, dispatch] = useDatalayerValue();
-  function makeURL() {}
+  const [{ user_login, user_whosWatching }, dispatch] = useDatalayerValue();
+
   useEffect(() => {
-    let num = Math.random() * 20;
-    console.log(num);
     axios
       .get(
         "https://api.themoviedb.org/3/movie/top_rated?api_key=806b77e869cb164b4c4ded05ba02c78a&language=en-US&page=1"
@@ -50,11 +50,23 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <Menu />
-      <Header />
-      <Body />
-    </div>
+    <>
+      {user_login ? (
+        <>
+          {user_whosWatching ? (
+            <div className="app">
+              <Menu />
+              <Header />
+              <Body />
+            </div>
+          ) : (
+            <WhosWatching />
+          )}
+        </>
+      ) : (
+        <Login />
+      )}
+    </>
   );
 }
 

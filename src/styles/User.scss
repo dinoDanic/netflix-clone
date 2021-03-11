@@ -1,0 +1,18 @@
+.user {
+  cursor: pointer;
+  width: 8vw;
+  height: 8vw;
+  margin-right: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    max-width: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+}

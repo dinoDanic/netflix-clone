@@ -3,7 +3,11 @@ export const initialState = {
   topRatedFull: null,
   popular: null,
   orginals: null,
+  user_login: false,
+  user_email: null,
+  user_whosWatching: false,
   api_key: "806b77e869cb164b4c4ded05ba02c78a",
+  user2: null,
 };
 
 const reducer = (state, action) => {
@@ -28,6 +32,26 @@ const reducer = (state, action) => {
       return {
         ...state,
         orginals: action.orginals,
+      };
+    case "USER_EMAIL":
+      return {
+        ...state,
+        user_email: action.user_email,
+      };
+    case "USER_LOGIN":
+      return {
+        ...state,
+        user_login: action.user_login,
+      };
+    case "ADD_USER2":
+      return {
+        ...state,
+        user2: action.user2,
+      };
+    case "USER_WHOSWATCHING":
+      return {
+        ...state,
+        user_whosWatching: action.user_whosWatching,
       };
     default:
       return state;

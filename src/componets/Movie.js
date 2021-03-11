@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "../styles/Movie.scss";
-import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
+
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import ThumbDownIcon from "@material-ui/icons/ThumbDown";
@@ -16,8 +16,8 @@ function Movie({ moveId, image, movieName, releaseDate }) {
     },
   };
   const movie__infoAni = {
-    hidden: { opacity: 0, transition: { delay: 0.3 } },
-    show: { opacity: 1, transition: { delay: 0.3 } },
+    hidden: { opacity: 0, transition: { delay: 0.2 } },
+    show: { opacity: 1, transition: { delay: 0.2 } },
   };
   return (
     <motion.div
@@ -26,11 +26,14 @@ function Movie({ moveId, image, movieName, releaseDate }) {
       initial="hidden"
       animate="show"
       variants={vairants}
-      transition={{ duration: 0.3, delay: 0.3 }}
+      transition={{ duration: 0.2, delay: 0.3 }}
       onHoverStart={() => setMovieHover(true)}
       onHoverEnd={() => setMovieHover(false)}
       whileHover={{
         scale: 1.3,
+        y: -20,
+        zIndex: 999,
+        boxShadow: "0 0 10px 1px black",
       }}
     >
       <img src={image} alt="" />
@@ -40,8 +43,6 @@ function Movie({ moveId, image, movieName, releaseDate }) {
         animate={movieHover ? "show" : "hidden"}
       >
         <div className="movie__icons">
-          <PlayCircleFilledIcon className="movie__icon" fontSize="large" />
-
           <AddCircleOutlineIcon className="movie__icon" fontSize="large" />
           <ThumbUpAltIcon className="movie__icon" fontSize="large" />
           <ThumbDownIcon className="movie__icon" fontSize="large" />

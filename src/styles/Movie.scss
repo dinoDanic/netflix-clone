@@ -1,14 +1,27 @@
 .movie {
-  overflow: hidden;
   margin: 0 10px 0 0;
-  cursor: pointer;
 
+  width: 900px;
+  cursor: pointer;
+  height: 300px;
+  position: relative;
+  transition: 0.3s ease left;
+  transition-delay: 0.3s;
+  left: 0;
+  z-index: 500;
   img {
     height: 180px;
     width: 300px;
     object-fit: cover;
-    margin: 20px 0 0 0;
-    border-radius: 8px;
+    border-radius: 6px;
+    transition: 1s ease border-radius;
+    &:hover {
+      border-radius: 6px 6px 0 0;
+    }
+  }
+
+  &:first-child:hover {
+    left: 50px;
   }
 }
 .movie__controls {
@@ -36,27 +49,4 @@
     transform: scale(1.2);
     transition: ease-in transform 0.2s;
   }
-}
-.movieLarge {
-  display: flex;
-  margin-right: 10px;
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-  img {
-    width: 300px;
-    height: 600px;
-    object-fit: cover;
-    margin-top: 20px;
-    &:last-child {
-      height: 80px;
-      width: 180px;
-      object-fit: contain;
-      position: absolute;
-    }
-  }
-}
-.movieLarge__logo {
-  width: 50px;
-  height: 10px;
 }

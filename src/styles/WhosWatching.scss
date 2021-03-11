@@ -1,0 +1,41 @@
+.whosWatching {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 400;
+  }
+}
+.whosWatching__users {
+  display: flex;
+}
+.whosWatching__avatar,
+.whosWatching__addUser {
+  cursor: pointer;
+  width: 8vw;
+  height: 8vw;
+  margin-right: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    max-width: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+}
+.whosWatching__addUserBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .MuiSvgIcon-root {
+    font-size: 3rem;
+  }
+}
